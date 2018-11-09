@@ -1,0 +1,85 @@
+server:
+  servlet:
+    context-path: /user
+  port: 8777
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot_mybatis?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+# JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    # 输出日志
+    show-sql: true
+    # 数据库类型
+    database: mysql
+  #redis配置
+  redis:
+#    database: 0
+    host: 127.0.0.1
+    password: 123456
+    timeout: 8000
+    port: 6379
+    database: 5
+    jedis:
+#    lettuce:
+      pool:
+        max-active: 8 # 连接池最大连接数（使用负值表示没有限制）
+        max-idle: 8 # 连接池中的最大空闲连接
+        max-wait: -1 #连接池最大阻塞等待时间（使用负值表示没有限制)
+        min-idle: 0 # 连接池中的最小空闲连接
+
+  #热部署配置
+  devtools:
+    restart:
+      enabled: true  #热部署生效
+      additional-paths: src/main/java,src/main/resources/mybatis,src/main/resources/templates  #设置重启目录
+      exclude: src/main/resources/static  #设置不重启目录
+
+  #模版引擎配置
+  freemarker:
+    request-context-attribute: req  #req访问request
+    suffix: html  #后缀名
+    content-type: text/html
+    enabled: true
+    cache: false #缓存配置
+    template-loader-path: classpath:/templates/ #模板加载路径 按需配置
+    charset: UTF-8 #编码格式
+    settings:
+      number_format: '0.##'   #数字格式化，无小数点
+
+#分页配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
+
+#配置密码
+jasypt:
+  encryptor:
+    password: abc123
+
+#mybatis配置
+mybatis:
+  typeAliasesPackage: com.nick.bean
+  mapperLocations: classpath:/mybatis/*.xml
+#yml解析test
+my1:
+  age: 22
+  name: battcn
+
+
+#日志配置
+#logging:
+#  config: log4j2.yml
+#  root: WARN
+#  level:
+#    org:
+#      springframework:
+#        web: DEBUG
+#      hibernate: ERROR

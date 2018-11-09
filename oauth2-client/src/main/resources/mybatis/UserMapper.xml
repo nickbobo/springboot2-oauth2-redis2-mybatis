@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定工作空间，要与接口名相同，源代码没有去看，猜测应该是通过"这里的namespace.下边方法的id"来定位方法的 -->
+<mapper namespace="com.nick.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.nick.bean.User" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="username" property="username" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List" >
+        ID, USERNAME, PASSWORD, AGE
+    </sql>
+    <!-- insert user -->
+    <insert id = "insert" parameterType="com.nick.bean.User">
+        INSERT INTO USER(ID,USERNAME,PASSWORD,AGE) VALUES(#{id},#{username},#{password},#{age});
+    </insert>
+
+    <!-- update user -->
+    <update id="update" parameterType="com.nick.bean.User">
+        UPDATE USER SET USERNAME=#{username} , PASSWORD=#{password} , AGE = #{age} WHERE ID=#{id}
+    </update>
+
+    <!-- find user -->
+    <select id="find" parameterType="int" resultType="com.nick.bean.User">
+        SELECT ID,USERNAME,PASSWORD,AGE FROM USER WHERE ID=#{0}
+    </select>
+
+    <!-- delete user -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM USER WHERE ID=#{0}
+    </delete>
+
+    <select id="findByPage" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from USER
+    </select>
+</mapper>

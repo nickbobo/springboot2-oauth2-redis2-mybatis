@@ -1,0 +1,92 @@
+2018-11-07 12:11:40,653:ERROR restartedMain (SpringApplication.java:858) - Application run failed
+java.lang.IllegalStateException: java.io.FileNotFoundException: /Users/nick/object/java/springboot/spring-boot2-learning/springboot2-oauth2-redis2/oauth2-client/spring-log4j2.xml (No such file or directory)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:302) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:263) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:226) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:199) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at com.nick.Oauth2ClientApplication.main(Oauth2ClientApplication.java:12) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+Caused by: java.io.FileNotFoundException: /Users/nick/object/java/springboot/spring-boot2-learning/springboot2-oauth2-redis2/oauth2-client/spring-log4j2.xml (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_144]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_144]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_144]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_144]
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90) ~[?:1.8.0_144]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188) ~[?:1.8.0_144]
+	at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_144]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:294) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	... 19 more
+2018-11-07 12:12:25,971:ERROR restartedMain (SpringApplication.java:858) - Application run failed
+java.lang.IllegalStateException: java.io.FileNotFoundException: /Users/nick/object/java/springboot/spring-boot2-learning/springboot2-oauth2-redis2/oauth2-client/log4j2.yml (No such file or directory)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:302) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:263) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:226) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:199) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at com.nick.Oauth2ClientApplication.main(Oauth2ClientApplication.java:12) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_144]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+Caused by: java.io.FileNotFoundException: /Users/nick/object/java/springboot/spring-boot2-learning/springboot2-oauth2-redis2/oauth2-client/log4j2.yml (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_144]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_144]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_144]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_144]
+	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:90) ~[?:1.8.0_144]
+	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:188) ~[?:1.8.0_144]
+	at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_144]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:294) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	... 19 more
+2018-11-07 12:12:42,560:INFO restartedMain (StartupInfoLogger.java:50) - Starting Oauth2ClientApplication on mit-nick.local with PID 32712 (/Users/nick/object/java/springboot/spring-boot2-learning/springboot2-oauth2-redis2/oauth2-client/target/classes started by nick in /Users/nick/object/java/springboot/spring-boot2-learning/springboot2-oauth2-redis2/oauth2-client)
+2018-11-07 12:12:42,571:INFO restartedMain (SpringApplication.java:675) - No active profile set, falling back to default profiles: default
+2018-11-07 12:12:42,661:INFO restartedMain (DeferredLog.java:227) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-07 12:12:42,662:INFO restartedMain (DeferredLog.java:227) - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-07 12:12:44,213:WARN restartedMain (ClassPathMapperScanner.java:166) - No MyBatis mapper was found in '[com.nick]' package. Please check your configuration.
+2018-11-07 12:12:45,452:INFO restartedMain (TomcatWebServer.java:90) - Tomcat initialized with port(s): 8777 (http)
+2018-11-07 12:12:45,474:INFO restartedMain (DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8777"]
+2018-11-07 12:12:45,489:INFO restartedMain (DirectJDKLog.java:173) - Starting service [Tomcat]
+2018-11-07 12:12:45,489:INFO restartedMain (DirectJDKLog.java:173) - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-07 12:12:45,525:INFO restartedMain (DirectJDKLog.java:173) - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/nick/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-11-07 12:12:45,794:INFO restartedMain (DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+2018-11-07 12:12:45,795:INFO restartedMain (ServletWebServerApplicationContext.java:285) - Root WebApplicationContext: initialization completed in 3133 ms
+2018-11-07 12:12:45,855:INFO restartedMain (ServletRegistrationBean.java:186) - Servlet dispatcherServlet mapped to [/]
+2018-11-07 12:12:45,870:INFO restartedMain (AbstractFilterRegistrationBean.java:248) - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-07 12:12:45,873:INFO restartedMain (AbstractFilterRegistrationBean.java:248) - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-07 12:12:45,876:INFO restartedMain (AbstractFilterRegistrationBean.java:248) - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-07 12:12:45,877:INFO restartedMain (AbstractFilterRegistrationBean.java:248) - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-07 12:12:46,283:INFO restartedMain (ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-07 12:12:46,903:INFO restartedMain (OptionalLiveReloadServer.java:57) - LiveReload server is running on port 35729
+2018-11-07 12:12:46,955:INFO restartedMain (DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8777"]
+2018-11-07 12:12:47,019:INFO restartedMain (DirectJDKLog.java:173) - Using a shared selector for servlet write/read
+2018-11-07 12:12:47,078:INFO restartedMain (TomcatWebServer.java:204) - Tomcat started on port(s): 8777 (http) with context path '/user'
+2018-11-07 12:12:47,088:INFO restartedMain (StartupInfoLogger.java:59) - Started Oauth2ClientApplication in 5.112 seconds (JVM running for 6.491)
+2018-11-07 12:14:23,668:INFO http-nio-8777-exec-1 (DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-07 12:14:23,669:INFO http-nio-8777-exec-1 (FrameworkServlet.java:521) - Initializing Servlet 'dispatcherServlet'
+2018-11-07 12:14:23,690:INFO http-nio-8777-exec-1 (FrameworkServlet.java:543) - Completed initialization in 20 ms
+2018-11-07 12:14:23,785:INFO http-nio-8777-exec-1 (HelloworldApplication.java:28) - bala=balabalabalabala 
+2018-11-07 13:24:09,595:INFO Thread-9 (ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
